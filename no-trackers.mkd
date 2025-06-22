@@ -30,7 +30,8 @@ informative:
   tsohtmlkernel:
     target: "https://mailarchive.ietf.org/arch/msg/ietf/8HJKm4hqhhMDN_5D-c1ZvDkn5Ws/"
     title: "IETF@IETF.org email archive, posting from Theodore T'so"
-    author: "Theodore T'so"
+    author:
+     - name: "Theodore T'so"
     date: 2023-08-19
 
 venue:
