@@ -1,7 +1,7 @@
 ---
 title: A policy on third-party links in IETF emails and archives
 abbrev: no-trackers
-docname: draft-richardson-no-trackers-in-archives
+docname: draft-richardson-no-trackers-in-archives-00
 
 ipr: trust200902
 area: Internet
