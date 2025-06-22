@@ -55,7 +55,7 @@ Indeed unlike many organizations, face to face meetings are not considered final
 To that end, an accurate, searchable, safe and public archive is maintained by the IETF.
 Viewing the archives should not subject participants to monitoring by third parties.
 
-An increasing occurance is (enterprise) email systems that attempt to make all links "safe" for their employees, screening their employees from the phising attack of the day.
+An increasing occurrence is (enterprise) email systems that attempt to make all links "safe" for their employees, screening their employees from the phishing attack of the day.
 This is often accomplishing by filtering all email for HTTP links that appear in email, and then rewriting them to go through a filtering service.
 
 Such services attempt to then block links that the enterprise considers harmful.
@@ -68,10 +68,10 @@ This is then sent back to the IETF mailing list.
 
 ## Risks to other Participants
 
-Other readers, particularily those whose mail user agent prefers an HTML rendering, will then get links which go through the filtering service.
+Other readers, particularly those whose mail user agent prefers an HTML rendering, will then get links which go through the filtering service.
 
 Should the reader decide to follow that link: it might point some important discussion on an IETF mailarchive, or reference data, or other standards organization, then the reader will disclose their activity to this third party filtering service.
-(The author of this document suspects that this may well violate privacy proviions of the GDPR, but the author has no expertise to know)
+(The author of this document suspects that this may well violate privacy provisions of the GDPR, but the author has no expertise to know)
 
 The above is the *best case* situation.
 The user's privacy is violated.
@@ -80,7 +80,7 @@ In some other cases, the filtering service in question will refuse to process th
 
 This could because the filtering service has no contract with the reader.
 Filtering services would be well advised to not process link requests from random strangers on the Internet.
-Answering such things is essentially creating an open proxy by which attackers can mount destributed denial of service attacks on others.
+Answering such things is essentially creating an open proxy by which attackers can mount distributed denial of service attacks on others.
 These services should be encouraged not to allow this, but closing this loophole would render all the links broken to others.
 
 Some filtering services are not stateless: that is, they do not store the entire method to access the target URL in the URL they provide.
@@ -112,10 +112,10 @@ This still leaves direct readers and IMAP users vulnerable.
 ## Filter URLs when processing emails
 
 The same URL recognizing system could operate as a mailman filter.
-It could either render the filtering URLs unuseable.
+It could either render the filtering URLs unusable.
 
 Alternatively, it could reject the email.
-While the 451 result code used in HTTP {{?RFC7725}} might seem appropriate, 4xx code in SMTP are retriable, some 5xx code would need to be used.
+While the 451 result code used in HTTP {{?RFC7725}} might seem appropriate, 4xx code in SMTP are retrievable, some 5xx code would need to be used.
 There would need to be a FAQ page cited back to the user so that they could understand what the problem was.
 
 ## No HTML email
@@ -130,7 +130,7 @@ Such emails would then need to be rejected, again with a clear message, and a re
 
 # Objections
 
-The list of all the filtering systems is unbounced, which ones are a problem is a problem.
+The list of all the filtering systems is unbounded, which ones are a problem is a problem.
 Like all security questions, there are no promises of absolute security, but rather incremental improvements that make this better.
 One advantage of the increasingly centralization of email is that the set of filtering systems that these centralized solutions use is not that large.
 A great deal of improvement can be made with only a few rules.
@@ -139,7 +139,7 @@ The filtering options that would reject email will be confusing to many users.
 In particular, if the filter rewriting is not visible to the user in their Sent box, then it might be very difficult for them to understand what has gone one.
 
 In many cases, the tracking URL was not placed in the user themselves, but was in some of the text that was quoted.
-Lack of editing of quoted parts in email, particularly by those in top-quote and do not read the email itself, is unfortunately endemnic.
+Lack of editing of quoted parts in email, particularly by those in top-quote and do not read the email itself, is unfortunately endemic.
 Learning to quote properly is a key part of contributing well to the IETF.
 In many cases, the presence of the tracking URL is part of quoted that text that does not even need to be present.
 
