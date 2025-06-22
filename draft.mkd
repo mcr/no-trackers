@@ -19,7 +19,6 @@ pi:    # can use array (if all yes) or hash here
 
 author:
 
-
 - ins: M. Richardson
   name: Michael Richardson
   org: Sandelman Software Works
@@ -31,6 +30,11 @@ normative:
 
 informative:
   RFC7030:
+
+venue:
+  group: anima
+  mail: anima@ietf.org
+  github: anima-wg/voucher
 
 --- abstract
 

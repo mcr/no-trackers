@@ -1,6 +1,7 @@
-DRAFT:=draft
+DRAFT:=in-memorium
 VERSION:=$(shell ./getver ${DRAFT}.mkd )
 EXAMPLES=
+XML2RFC=/corp/ietf/venv/bin/xml2rfc
 
 ${DRAFT}-${VERSION}.txt: ${DRAFT}.txt
 	cp ${DRAFT}.txt ${DRAFT}-${VERSION}.txt
@@ -8,14 +9,14 @@ ${DRAFT}-${VERSION}.txt: ${DRAFT}.txt
 
 %.xml: %.mkd
 	kramdown-rfc2629 -3 ${DRAFT}.mkd >${DRAFT}.xml
-	unset DISPLAY; XML_LIBRARY=$(XML_LIBRARY):./src xml2rfc --v2v3 ${DRAFT}.xml
+	${XML2RFC} --v2v3 ${DRAFT}.xml
 	mv ${DRAFT}.v2v3.xml ${DRAFT}.xml
 
 %.txt: %.xml
-	unset DISPLAY; XML_LIBRARY=$(XML_LIBRARY):./src xml2rfc --text -o $@ $?
+	${XML2RFC} --text -o $@ $?
 
 %.html: %.xml
-	unset DISPLAY; XML_LIBRARY=$(XML_LIBRARY):./src xml2rfc --html -o $@ $?
+	${XML2RFC} --html -o $@ $?
 
 submit: ${DRAFT}.xml
 	curl -s -F "user=mcr+ietf@sandelman.ca" ${REPLACES} -F "xml=@${DRAFT}.xml" https://datatracker.ietf.org/api/submission | jq
